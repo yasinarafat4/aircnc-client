@@ -6,14 +6,8 @@ import { toast } from "react-hot-toast";
 import { TbFidgetSpinner } from "react-icons/tb";
 
 const Login = () => {
-  const {
-    loading,
-    setLoading,
-    createUser,
-    signIn,
-    signInWithGoogle,
-    resetPassword,
-  } = useContext(AuthContext);
+  const { loading, setLoading, signIn, signInWithGoogle, resetPassword } =
+    useContext(AuthContext);
 
   const navigate = useNavigate();
   const emailRef = useRef();

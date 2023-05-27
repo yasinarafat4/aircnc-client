@@ -5,6 +5,7 @@ const Avatar = () => {
   const { user } = useContext(AuthContext);
   return (
     <img
+      title={user && user.displayName ? user.displayName : "User"}
       className="rounded-full"
       src={user && user.photoURL ? user.photoURL : avatarImg}
       alt="profile"

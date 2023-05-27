@@ -7,13 +7,15 @@ import { Link } from "react-router-dom";
 const MenuDropdown = () => {
   const { user, logOut } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
+
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
+
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
-        <div className="hidden md:block text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer">
+        <div className="hidden md:block text-sm font-semibold py-3 px-3 rounded-full hover:bg-neutral-100 transition cursor-pointer">
           AirCNC your home
         </div>
         <div

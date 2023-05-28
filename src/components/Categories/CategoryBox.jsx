@@ -4,7 +4,6 @@ import qs from "query-string";
 
 const CategoryBox = ({ label, icon: Icon }) => {
   const [params, setParams] = useSearchParams();
-  const value = params.get("category");
   const navigate = useNavigate();
 
   // Category handler
@@ -28,7 +27,6 @@ const CategoryBox = ({ label, icon: Icon }) => {
     navigate(url);
   };
 
-  console.log(value);
   return (
     <div
       onClick={handleClick}
